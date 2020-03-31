@@ -39,6 +39,7 @@ class file:
         self.file=open(self.name, mode="r", encoding="utf-8")
         return self.file.read()
 
+
 f1=file("data1.txt")
 f1.open("hello world")
 data1=f1.read()
