@@ -16,6 +16,9 @@ def getdata(url):
     root=bs4.BeautifulSoup(data, "html.parser")
     titles=root.find_all("div", class_="title")
 
+    with open("title_goss.txt","w",encoding="utf-8") as file:
+        file.write("")
+
     with open("title_goss.txt","a",encoding="utf-8") as file:
         for title in titles:
             if title.a != None:
