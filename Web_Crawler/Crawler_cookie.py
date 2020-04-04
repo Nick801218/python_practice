@@ -1,5 +1,8 @@
 #
 import urllib.request as req
+with open("title_goss.txt","w",encoding="utf-8") as file:
+        file.write("")
+
 def getdata(url):
 
 
@@ -16,8 +19,7 @@ def getdata(url):
     root=bs4.BeautifulSoup(data, "html.parser")
     titles=root.find_all("div", class_="title")
     # Clear data in title_goss.txt
-    with open("title_goss.txt","w",encoding="utf-8") as file:
-        file.write("")
+
     # Opens title_goss.txt for appending
     with open("title_goss.txt","a",encoding="utf-8") as file:
         for title in titles:
